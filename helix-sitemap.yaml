@@ -1,0 +1,14 @@
+version: 1
+
+# https://www.hlx.live/developer/sitemap
+sitemaps:
+  website:
+    origin: https://www.fba.com
+    lastmod: YYYY-MM-DD
+    default: en-US
+    languages:
+      us:
+        source: /fba-shared/assets/query-index.json
+        alternate: /{path}.html
+        destination: /fba-shared/assets/sitemap.xml
+        hreflang: en-US
