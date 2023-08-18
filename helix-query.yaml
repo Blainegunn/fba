@@ -3,7 +3,7 @@ version: 1
 indices:
   def: &def
     include:
-    - '/boots/**'
+    - '/**'
     exclude:
     - '/fba-shared/**'
     target: /fba-shared/assets/query-index.xlsx
