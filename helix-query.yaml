@@ -3,10 +3,10 @@ version: 1
 indices:
   def: &def
     include:
-    - '/**'
+    - '/boots/**'
     exclude:
-    - '/draftsx/fba-shared/**'
-    target: /fba-shared/assets/query-index.xlsx
+    - '/drafts/**'
+    target: /boots/query-index.xlsx
     properties:
       title:
         select: head > meta[property="og:title"]
