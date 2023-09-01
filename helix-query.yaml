@@ -5,7 +5,7 @@ indices:
     include:
     - '/**'
     exclude:
-    - '/fba-shared/**'
+    - '/drafts/fba-shared/**'
     target: /fba-shared/assets/query-index.xlsx
     properties:
       title:
@@ -23,4 +23,3 @@ indices:
       lastModified:
         select: none
         value: parseTimestamp(headers['last-modified'], 'ddd, DD MMM YYYY hh:mm:ss GMT')
-
