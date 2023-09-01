@@ -6,7 +6,7 @@ sitemaps:
     lastmod: YYYY-MM-DD
     languages:
       default:
-        source: /fba-shared/assets/query-index.json
-        destination: /fba-shared/assets/sitemap.xml
+        source: /boots/query-index.json
+        destination: /boots/sitemap.xml
         hreflang: en
         alternate: /{path}
