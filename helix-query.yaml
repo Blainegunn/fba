@@ -5,7 +5,7 @@ indices:
     include:
     - '/**'
     exclude:
-    - '/drafts/fba-shared/**'
+    - '/draftsx/fba-shared/**'
     target: /fba-shared/assets/query-index.xlsx
     properties:
       title:
