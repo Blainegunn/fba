@@ -20,11 +20,24 @@ export default async function init(el) {
         const lineItem = createTag('p', { class: `boot_line-item ${labels[idx]}`}, `${labels[idx]}: `);
         lineItem.append(element);
         if (labels[idx] === 'Family') {
-          const metaItem = createTag('meta', { name: 'family', content: `${element.childNodes[1].textContent.trim()}`});
-	        document.body.append(metaItem)
+          const tags = element.childNodes[1].textContent.trim();
+          const metaItem = createTag('meta', { name: 'family', content: tags});
+	        document.body.append(metaItem);
+          const tagsArr = tags.split(',');
+          console.log(tagsArr);
+
+          tagsArr.forEach((tag) => {
+            console.log(tag.trim());
+            const tagLink = createTag('a', { href: `/${tag.trim()}`});
+            console.log('element');
+            console.log(element);
+            element = tagLink;
+          });
+
+
         }
 
-        lineItem.setAttribute('content', `${element.childNodes[1].textContent.trim()}`);
+        // lineItem.setAttribute('content', `${element.childNodes[1].textContent.trim()}`);
         details.append(lineItem); 
     });
 
