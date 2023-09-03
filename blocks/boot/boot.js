@@ -17,8 +17,14 @@ export default async function init(el) {
     children.shift();
 
     children.forEach((element, idx) => {
-        const lineItem = createTag('p', { class: 'boot_line-item'}, `${labels[idx]}: `);
+        const lineItem = createTag('p', { class: `boot_line-item ${labels[idx]}`}, `${labels[idx]}: `);
         lineItem.append(element);
+        if (labels[idx] === 'Family') {
+          const metaItem = createTag('meta', { name: 'family', content: `${element.childNodes[1].textContent.trim()}`});
+	        document.body.append(metaItem)
+        }
+
+        lineItem.setAttribute('content', `${element.childNodes[1].textContent.trim()}`);
         details.append(lineItem); 
     });
 
