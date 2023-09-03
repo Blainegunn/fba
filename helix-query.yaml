@@ -23,4 +23,6 @@ indices:
       family:
         select: head > meta[name="family"]
         value: attribute(el, 'content')
-
+      date:
+        select: head > meta[name="publishdate"]
+        value: dateValue(attribute(el, 'content'), 'MM-DD-YYYY')
