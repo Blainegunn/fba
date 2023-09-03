@@ -21,6 +21,6 @@ indices:
         select: none
         value: parseTimestamp(headers['last-modified'], 'ddd, DD MMM YYYY hh:mm:ss GMT')
       family:
-        select: body > meta[name="family"]
+        select: head > meta[name="family"]
         value: attribute(el, 'content')
 
