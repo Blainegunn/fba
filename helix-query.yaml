@@ -20,3 +20,7 @@ indices:
       lastModified:
         select: none
         value: parseTimestamp(headers['last-modified'], 'ddd, DD MMM YYYY hh:mm:ss GMT')
+      family:
+        select: boot_line-item Family
+        value: attribute(el, 'content')
+
