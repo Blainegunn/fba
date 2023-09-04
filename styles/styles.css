@@ -13,3 +13,7 @@
 .gnav-brand-title {
     display: block !important;
 }
+
+.hide {
+    display: none;
+}

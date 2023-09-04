@@ -2,15 +2,19 @@ import { getLibs } from '../../scripts/utils.js';
 const { createTag } = await import(`${getLibs()}/utils/utils.js`);
 
 
+// const labels = [
+//     'Brand', 'Model', 'Color', 'Style Code', 'Family', 'Year', 'Traction', 'MSRP', 'Credit'
+// ]
 const labels = [
-    'Brand', 'Model', 'Color', 'Style Code', 'Family', 'Year', 'Traction', 'MSRP', 'Credit'
+  'Brand', 'Model', 'Color', 'Style Code', 'Year', 'Traction', 'MSRP', 'Credit', 'Tags'
 ]
 
 const  setTags =  async (ele, ts) => {
   console.log((`setting tags for  ${ts}`));
+  ele.querySelector('div').className = 'hide'
   ts.forEach((tag) => {
 
-    const tagLink = createTag('a', { href: `/${tag.trim()}`}, tag.trim());
+    const tagLink = createTag('a', {class: 'boot-tag',  href: `/family/${tag.trim().replace(' ', '-').toLocaleLowerCase()}`}, tag.trim());
     console.log('tagLink');
     console.log(ele.innerText);
     ele.append(tagLink)
@@ -32,7 +36,7 @@ export default async function init(el) {
     children.forEach((element, idx) => {
         const lineItem = createTag('p', { class: `boot_line-item ${labels[idx]}`}, `${labels[idx]}: `);
         lineItem.append(element);
-        if (labels[idx] === 'Family') {
+        if (labels[idx] === 'Tags') {
           const tags = element.childNodes[1].textContent.trim();
           const tagsArr = tags.split(',');
           setTags(element, tagsArr);

@@ -37,3 +37,11 @@ h1 {
 .boot_line-item:last-of-type {
     border-bottom: 1px black solid;
 }
+
+.boot-tag {
+    font-weight: normal;
+    text-decoration: underline;
+    color: black;
+    text-decoration-color: #fa0f00;
+    margin: 5px;
+}
