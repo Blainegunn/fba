@@ -10,6 +10,7 @@
   width: calc(100% - 20px);
   max-width: calc(300px);
   max-height: 300px;
+  min-height: 300px;
   overflow: hidden;
   border: 1px black solid;
   display: flex;
@@ -29,9 +30,12 @@
 }
 
 .bootList-item-title {
-  position: absolute;
-  font-size: 16px;
-  text-decoration: underline;
-  color: black;
-  text-decoration-color: #fa0f00;
+    position: absolute;
+    font-size: 16px;
+    text-decoration: underline;
+    color: black;
+    width: 280px;
+    text-decoration-color: #fa0f00;
+    background-color: white;
+    display: flex;
 }
