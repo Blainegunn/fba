@@ -13,8 +13,6 @@ export default async function init(el) {
     console.log(boot.family.toLowerCase());
     if (boot.family.toLowerCase().includes(family)) {
         console.log(boot.family);
-        const resp = await fetch(`${boot.path}.plain.html`);
-        if (!resp.ok) return;
         const bootEntry = createTag('a', { class: 'bootList-item', href: `${boot.path}`  });
         const title = createTag('p', { class: 'bootList-item-title' }, `${boot.title}`);
         const img = createTag('img', { class: 'bootList-item-img', src: `${boot.image}` }, `${boot.title}`);
