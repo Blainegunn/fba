@@ -29,6 +29,8 @@
   .boot_main-img {
     min-width: 350px;
     min-height: 350px;
+    max-width: 350px;
+    max-height: 350px;
   }
 
   .boot_main-img img {
@@ -50,6 +52,7 @@
 
 h1 {
     text-align: center;
+    padding: 60px 0 30px;
 }
 
 .boot_line-item:last-of-type {
@@ -64,6 +67,6 @@ h1 {
     margin: 5px;
 }
 
-.boot_line-item .Tags {
+.boot_line-item.Tags {
   padding-bottom: 20px;
 }
