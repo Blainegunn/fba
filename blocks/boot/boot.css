@@ -4,6 +4,7 @@
     gap: 20px;
     flex-direction: row-reverse;
     align-items: end;
+    margin: 0 15px;
 }
 
 @media (max-width: 900px) {
@@ -22,6 +23,18 @@
     overflow: hidden;
     border: 1px black solid;
     margin: 0 16px;
+}
+
+@media (max-width: 900px) {
+  .boot_main-img {
+    min-width: 350px;
+    min-height: 350px;
+  }
+
+  .boot_main-img img {
+    min-width: 350px;
+    min-height: 350px;
+  }
 }
 
 .boot_line-item {
@@ -50,4 +63,8 @@ h1 {
     color: black;
     text-decoration-color: #fa0f00;
     margin: 5px;
+}
+
+.boot_line-item .Tags {
+  padding-bottom: 20px;
 }
