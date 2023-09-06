@@ -2,7 +2,8 @@ import { getLibs } from '../../scripts/utils.js';
 
 export default async function init(el) {
   const { createTag } = await import(`${getLibs()}/utils/utils.js`);
-  const qResp = await fetch('/boots/query-index.json?limit=16');
+  const qResp = await fetch('/boots/query-index.json?limit=360');
+  // const qResp = await fetch('/boots/query-index.json?limit=16');
   console.log(qResp);
   if (!qResp.ok) return;
   const list = createTag('div', { class: 'blog-list-container' });
