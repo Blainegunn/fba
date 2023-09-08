@@ -1,10 +1,21 @@
 .taglist {
     padding: 40px 0 80px;
     margin: 0 16px;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    flex-wrap: wrap;
 }
 .tag {
     display: inline-block;
     border: 1px black solid;
-    margin: 5px;
     padding: 5px;
 }
+
+@media (max-width: 900px) {
+  .taglist {
+    justify-content: left;
+  }
+}
+
+

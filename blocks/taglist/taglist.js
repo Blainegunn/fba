@@ -5,7 +5,7 @@ const  setTags =  async (ele, ts) => {
   console.log((`setting tags for  ${ts}`));
   ts.forEach((tag) => {
 
-    const tagLink = createTag('a', { class: 'tag', href: `/family/${tag.trim().replace(' ', '-').toLocaleLowerCase()}`}, tag.trim());
+    const tagLink = createTag('a', { class: 'tag', href: `/family/${tag.trim().replaceAll(' ', '-').toLocaleLowerCase()}`}, tag.trim());
     console.log('tagLink');
     console.log(ele.innerText);
     // ele.append(tagLink)

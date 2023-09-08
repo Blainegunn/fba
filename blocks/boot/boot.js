@@ -14,7 +14,7 @@ const  setTags =  async (ele, ts) => {
   ele.querySelector('div').className = 'hide'
   ts.forEach((tag) => {
 
-    const tagLink = createTag('a', {class: 'boot-tag',  href: `/family/${tag.trim().replace(' ', '-').toLocaleLowerCase()}`}, tag.trim());
+    const tagLink = createTag('a', {class: 'boot-tag',  href: `/family/${tag.trim().replaceAll(' ', '-').toLocaleLowerCase()}`}, tag.trim());
     console.log('tagLink');
     console.log(ele.innerText);
     ele.append(tagLink)
