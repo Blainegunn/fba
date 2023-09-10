@@ -1,0 +1,29 @@
+.search.center   {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.search-prompt {
+  padding: 10px;
+  margin: 0 10px;
+  min-width: 300px;
+}
+
+.search-go {
+  padding: 10px;
+}
+
+.search-results {
+  padding: 60px 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  position: fixed;
+  top: 0;
+  background: black;
+  z-index: 100;
+  overflow: scroll;
+  height: 100%;
+}
